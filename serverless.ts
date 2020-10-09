@@ -29,13 +29,13 @@ const serverlessConfiguration: Serverless = {
     region: 'eu-central-1'
   },
   functions: {
-    hello: {
-      handler: 'handler.hello',
+    listTodos: {
+      handler: 'todos/infrastructure/lambda/list.handler',
       events: [
         {
           http: {
             method: 'get',
-            path: 'hello',
+            path: 'api/todos',
           }
         }
       ]

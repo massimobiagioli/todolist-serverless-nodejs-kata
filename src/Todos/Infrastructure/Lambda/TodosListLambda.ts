@@ -1,8 +1,10 @@
 import { APIGatewayProxyHandler } from 'aws-lambda';
-import {TodosListQueryDynamoDBImpl} from "../DynamoDB/TodosListQueryDynamoDBImpl";
+import {TodosListQuery} from "../../Application/Query/TodosListQuery";
+import {Types} from "../../../types";
+import {container} from "../../../inversify.config";
 
 export const handler: APIGatewayProxyHandler = async (_event, _context) => {
-  const query = new TodosListQueryDynamoDBImpl();
+  const query = container.get<TodosListQuery>(Types.TodosListQuery);
   const data = query.execute();
 
   return {

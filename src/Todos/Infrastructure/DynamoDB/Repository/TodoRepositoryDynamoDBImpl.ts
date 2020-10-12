@@ -6,7 +6,7 @@ import {injectable} from "inversify";
 export class TodoRepositoryDynamoDBImpl implements TodoRepository {
 
     find(): Todo[] {
-        let todos: Todo[] = new Array<Todo>();
+        const todos: Todo[] = new Array<Todo>();
 
         todos.push(new Todo("prova 1"));
         todos.push(new Todo("prova 2"));

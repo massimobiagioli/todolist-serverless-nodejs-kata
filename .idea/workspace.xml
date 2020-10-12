@@ -22,6 +22,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/todos/infrastructure/lambda" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
@@ -37,7 +38,7 @@
       <option name="presentableId" value="Default" />
       <updated>1602225754866</updated>
       <workItem from="1602225756031" duration="3014000" />
-      <workItem from="1602257680388" duration="1166000" />
+      <workItem from="1602257680388" duration="1824000" />
     </task>
     <servers />
   </component>

@@ -30,7 +30,7 @@ const serverlessConfiguration: Serverless = {
   },
   functions: {
     listTodos: {
-      handler: 'todos/infrastructure/lambda/list.handler',
+      handler: 'src/todos/infrastructure/lambda/TodosLambda.list',
       events: [
         {
           http: {

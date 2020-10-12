@@ -1,6 +1,6 @@
 import { APIGatewayProxyHandler } from 'aws-lambda';
 
-export const handler: APIGatewayProxyHandler = async (_event, _context) => {
+export const list: APIGatewayProxyHandler = async (_event, _context) => {
   let data: any[] = [
       { nome: "task1" },
       { nome: "task2" },

@@ -35,7 +35,54 @@ const serverlessConfiguration: Serverless = {
         {
           http: {
             method: 'get',
-            path: 'api/Todos',
+            path: 'api/todos',
+          }
+        }
+      ]
+    },
+    insertTodo: {
+      handler: 'src/Todos/Infrastructure/Lambda/InsertTodoLambda.handler',
+      events: [
+        {
+          http: {
+            method: 'post',
+            path: 'api/todos',
+          }
+        }
+      ]
+    },
+    updateTodo: {
+      handler: 'src/Todos/Infrastructure/Lambda/UpdateTodoLambda.handler',
+      events: [
+        {
+          http: {
+            method: 'put',
+            path: 'api/todos/{id}',
+            request: {
+              parameters: {
+                paths: {
+                  id: true
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    deleteTodo: {
+      handler: 'src/Todos/Infrastructure/Lambda/DeleteTodoLambda.handler',
+      events: [
+        {
+          http: {
+            method: 'delete',
+            path: 'api/todos/{id}',
+            request: {
+              parameters: {
+                paths: {
+                  id: true
+                }
+              }
+            }
           }
         }
       ]

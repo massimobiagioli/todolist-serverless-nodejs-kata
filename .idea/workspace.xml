@@ -7,6 +7,14 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="tsconfig.json" />
+        <option value="TypeScript File" />
+      </list>
+    </option>
+  </component>
   <component name="ProjectId" id="1id7k4Yq5NxWbg9yfj8Ff1cq7yX" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -22,6 +30,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Todos/Application/Query" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/todos/infrastructure/lambda" />
     </key>
@@ -38,11 +47,25 @@
       <option name="presentableId" value="Default" />
       <updated>1602225754866</updated>
       <workItem from="1602225756031" duration="3014000" />
-      <workItem from="1602257680388" duration="1824000" />
+      <workItem from="1602257680388" duration="5328000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2365" y="349" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1602492364357">
+      <screen x="1680" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2365" y="349" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1680.1027/1680.0.1920.1080@1680.0.1920.1080" timestamp="1602492364357" />
+    <state x="2453" y="263" key="#com.intellij.ide.util.MemberChooser" timestamp="1602494875359">
+      <screen x="1680" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2453" y="263" key="#com.intellij.ide.util.MemberChooser/0.0.1680.1050/1680.0.1920.1080@1680.0.1920.1080" timestamp="1602494875359" />
+    <state x="2378" y="294" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1602494911926">
+      <screen x="1680" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2378" y="294" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1680.1050/1680.0.1920.1080@1680.0.1920.1080" timestamp="1602494911926" />
   </component>
 </project>

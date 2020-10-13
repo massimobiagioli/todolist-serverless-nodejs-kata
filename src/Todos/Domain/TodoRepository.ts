@@ -6,4 +6,8 @@ export interface TodoRepository {
 
     insert(todo: Todo): string;
 
+    update(todo: Todo): void;
+
+    delete(id: string): void;
+
 }

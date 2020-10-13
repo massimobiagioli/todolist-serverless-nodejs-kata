@@ -7,6 +7,8 @@ import {TodoRepository} from "./Todos/Domain/TodoRepository";
 import {TodoRepositoryDynamoDBImpl} from "./Todos/Infrastructure/DynamoDB/Repository/TodoRepositoryDynamoDBImpl";
 import {InsertTodoCommandDynamoDBImpl} from "./Todos/Infrastructure/DynamoDB/Command/InsertTodoCommandDynamoDBImpl";
 import {InsertTodoCommand} from "./Todos/Application/Command/InsertTodoCommand";
+import {UpdateTodoCommand} from "./Todos/Application/Command/UpdateTodoCommand";
+import {UpdateTodoCommandDynamoDBImpl} from "./Todos/Infrastructure/DynamoDB/Command/UpdateTodoCommandDynamoDBImpl";
 
 const container = new Container();
 
@@ -15,5 +17,6 @@ container.bind<TodoRepository>(Types.TodoRepository).to(TodoRepositoryDynamoDBIm
 container.bind<TodosListQuery>(Types.TodosListQuery).to(TodosListQueryDynamoDBImpl);
 
 container.bind<InsertTodoCommand>(Types.InsertTodoCommand).to(InsertTodoCommandDynamoDBImpl);
+container.bind<UpdateTodoCommand>(Types.UpdateTodoCommand).to(UpdateTodoCommandDynamoDBImpl);
 
 export { container };

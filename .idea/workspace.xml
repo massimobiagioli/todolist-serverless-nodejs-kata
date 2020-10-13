@@ -25,17 +25,18 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="10.13.0" />
     <property name="javascript.nodejs.core.library.typings.version" value="10.17.39" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/fixture" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Todos/Infrastructure/DynamoDB/Command" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Todos/Infrastructure/DynamoDB/Command" />
+      <recent name="$PROJECT_DIR$/src/Todos/Application/Command" />
       <recent name="$PROJECT_DIR$/fixture" />
       <recent name="$PROJECT_DIR$/src/Todos/Infrastructure/Lambda" />
       <recent name="$PROJECT_DIR$/src/Todos/Infrastructure/DynamoDB/Repository" />
-      <recent name="$PROJECT_DIR$/todos" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/Todos/Infrastructure/DynamoDB/Query" />
@@ -65,10 +66,10 @@
       <screen x="1680" y="0" width="1920" height="1080" />
     </state>
     <state x="2365" y="349" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1680.1027/1680.0.1920.1080@1680.0.1920.1080" timestamp="1602492364357" />
-    <state x="2453" y="263" key="#com.intellij.ide.util.MemberChooser" timestamp="1602601089978">
+    <state x="2453" y="263" key="#com.intellij.ide.util.MemberChooser" timestamp="1602602210133">
       <screen x="1680" y="0" width="1920" height="1080" />
     </state>
-    <state x="2453" y="263" key="#com.intellij.ide.util.MemberChooser/0.0.1680.1050/1680.0.1920.1080@1680.0.1920.1080" timestamp="1602601089978" />
+    <state x="2453" y="263" key="#com.intellij.ide.util.MemberChooser/0.0.1680.1050/1680.0.1920.1080@1680.0.1920.1080" timestamp="1602602210133" />
     <state x="2378" y="294" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1602494911926">
       <screen x="1680" y="0" width="1920" height="1080" />
     </state>

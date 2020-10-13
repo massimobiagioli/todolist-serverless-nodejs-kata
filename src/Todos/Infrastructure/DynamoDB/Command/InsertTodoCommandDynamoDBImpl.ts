@@ -13,7 +13,7 @@ export class InsertTodoCommandDynamoDBImpl implements InsertTodoCommand {
     @inject(Types.TodoRepository) private todoRepository: TodoRepository
 
     execute(payload: InsertTodoCommandPayload): InsertTodoCommandOutput {
-        const todo: Todo = new Todo(payload.description);
+        const todo: Todo = new Todo(null, payload.description);
         const id: string = this.todoRepository.insert(todo);
         return new InsertTodoCommandOutput(id);
     }

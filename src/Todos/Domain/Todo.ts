@@ -1,4 +1,7 @@
 export class Todo {
-    constructor(public readonly description: string) {
+    constructor(
+        public readonly id: string | null,
+        public readonly description: string
+    ) {
     }
 }

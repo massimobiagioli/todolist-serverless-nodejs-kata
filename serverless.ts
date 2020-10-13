@@ -11,8 +11,8 @@ const serverlessConfiguration: Serverless = {
   custom: {
     webpack: {
       webpackConfig: './webpack.config.js',
-      includeModules: true
-    }
+      includeModules: true,
+    },
   },
   // Add the serverless-webpack plugin
   plugins: ['serverless-webpack'],
@@ -23,36 +23,36 @@ const serverlessConfiguration: Serverless = {
       minimumCompressionSize: 1024,
     },
     environment: {
-      AWS_NODEJS_CONNECTION_REUSE_ENABLED: '1'
+      AWS_NODEJS_CONNECTION_REUSE_ENABLED: '1',
     },
     profile: 'flowing_test',
-    region: 'eu-central-1'
+    region: 'eu-central-1',
   },
   functions: {
     listTodos: {
-      handler: 'src/Todos/Infrastructure/Lambda/TodosListLambda.handler',
+      handler: 'src/Todos/Infrastructure/Lambda/todos-list-lambda.handler',
       events: [
         {
           http: {
             method: 'get',
             path: 'api/todos',
-          }
-        }
-      ]
+          },
+        },
+      ],
     },
     insertTodo: {
-      handler: 'src/Todos/Infrastructure/Lambda/InsertTodoLambda.handler',
+      handler: 'src/Todos/Infrastructure/Lambda/insert-todo-lambda.handler',
       events: [
         {
           http: {
             method: 'post',
             path: 'api/todos',
-          }
-        }
-      ]
+          },
+        },
+      ],
     },
     updateTodo: {
-      handler: 'src/Todos/Infrastructure/Lambda/UpdateTodoLambda.handler',
+      handler: 'src/Todos/Infrastructure/Lambda/update-todo-lambda.handler',
       events: [
         {
           http: {
@@ -61,16 +61,16 @@ const serverlessConfiguration: Serverless = {
             request: {
               parameters: {
                 paths: {
-                  id: true
-                }
-              }
-            }
-          }
-        }
-      ]
+                  id: true,
+                },
+              },
+            },
+          },
+        },
+      ],
     },
     deleteTodo: {
-      handler: 'src/Todos/Infrastructure/Lambda/DeleteTodoLambda.handler',
+      handler: 'src/Todos/Infrastructure/Lambda/delete-todo-lambda.handler',
       events: [
         {
           http: {
@@ -79,15 +79,15 @@ const serverlessConfiguration: Serverless = {
             request: {
               parameters: {
                 paths: {
-                  id: true
-                }
-              }
-            }
-          }
-        }
-      ]
-    }
-  }
-}
+                  id: true,
+                },
+              },
+            },
+          },
+        },
+      ],
+    },
+  },
+};
 
 module.exports = serverlessConfiguration;

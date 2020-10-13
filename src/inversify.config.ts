@@ -9,6 +9,8 @@ import {InsertTodoCommandDynamoDBImpl} from "./Todos/Infrastructure/DynamoDB/Com
 import {InsertTodoCommand} from "./Todos/Application/Command/InsertTodoCommand";
 import {UpdateTodoCommand} from "./Todos/Application/Command/UpdateTodoCommand";
 import {UpdateTodoCommandDynamoDBImpl} from "./Todos/Infrastructure/DynamoDB/Command/UpdateTodoCommandDynamoDBImpl";
+import {DeleteTodoCommand} from "./Todos/Application/Command/DeleteTodoCommand";
+import {DeleteTodoCommandDynamoDBImpl} from "./Todos/Infrastructure/DynamoDB/Command/DeleteTodoCommandDynamoDBImpl";
 
 const container = new Container();
 
@@ -18,5 +20,6 @@ container.bind<TodosListQuery>(Types.TodosListQuery).to(TodosListQueryDynamoDBIm
 
 container.bind<InsertTodoCommand>(Types.InsertTodoCommand).to(InsertTodoCommandDynamoDBImpl);
 container.bind<UpdateTodoCommand>(Types.UpdateTodoCommand).to(UpdateTodoCommandDynamoDBImpl);
+container.bind<DeleteTodoCommand>(Types.DeleteTodoCommand).to(DeleteTodoCommandDynamoDBImpl);
 
 export { container };

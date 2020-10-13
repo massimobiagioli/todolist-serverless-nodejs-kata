@@ -15,4 +15,10 @@ export class TodoRepositoryDynamoDBImpl implements TodoRepository {
         return todos;
     }
 
+    insert(todo: Todo): string {
+        console.log(todo);
+        const id = '12345';
+        return id;
+    }
+
 }

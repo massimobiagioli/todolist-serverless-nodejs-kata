@@ -6,11 +6,9 @@ import {Types} from "../../../../types";
 
 @injectable()
 export class TodosListQueryDynamoDBImpl implements TodosListQuery {
-
     @inject(Types.TodoRepository) private todoRepository: TodoRepository
 
     execute(): Todo[] {
         return this.todoRepository.find();
     }
-
 }

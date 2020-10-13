@@ -4,4 +4,6 @@ export interface TodoRepository {
 
     find(): Todo[];
 
+    insert(todo: Todo): string;
+
 }

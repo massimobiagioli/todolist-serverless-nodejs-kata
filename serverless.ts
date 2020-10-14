@@ -7,6 +7,7 @@ const serverlessConfiguration: Serverless = {
     // app: your-app-name,
     // org: your-org-name,
   },
+
   frameworkVersion: '2',
   custom: {
     webpack: {
@@ -14,8 +15,10 @@ const serverlessConfiguration: Serverless = {
       includeModules: true,
     },
   },
+
   // Add the serverless-webpack plugin
   plugins: ['serverless-webpack'],
+
   provider: {
     name: 'aws',
     runtime: 'nodejs12.x',
@@ -27,7 +30,21 @@ const serverlessConfiguration: Serverless = {
     },
     profile: 'flowing_test',
     region: 'eu-central-1',
+    iamRoleStatements: [
+      {
+        Effect: 'Allow',
+        Action: [
+          'dynamodb: Query',
+          'dynamodb: GetItem',
+          'dynamodb: PutItem',
+          'dynamodb: UpdateItem',
+          'dynamodb: DeleteItem',
+        ],
+        Resource: 'arn:aws:dynamodb:eu-central-1:755827290206:table/Todos',
+      },
+    ],
   },
+
   functions: {
     listTodos: {
       handler: 'src/Todos/Infrastructure/Lambda/todos-list-lambda.handler',
@@ -40,6 +57,7 @@ const serverlessConfiguration: Serverless = {
         },
       ],
     },
+
     insertTodo: {
       handler: 'src/Todos/Infrastructure/Lambda/insert-todo-lambda.handler',
       events: [
@@ -51,6 +69,7 @@ const serverlessConfiguration: Serverless = {
         },
       ],
     },
+
     updateTodo: {
       handler: 'src/Todos/Infrastructure/Lambda/update-todo-lambda.handler',
       events: [
@@ -69,6 +88,7 @@ const serverlessConfiguration: Serverless = {
         },
       ],
     },
+
     deleteTodo: {
       handler: 'src/Todos/Infrastructure/Lambda/delete-todo-lambda.handler',
       events: [
@@ -86,6 +106,33 @@ const serverlessConfiguration: Serverless = {
           },
         },
       ],
+    },
+  },
+
+  resources: {
+    Resources: {
+      TodoTable: {
+        Type: 'AWS::DynamoDB::Table',
+        Properties: {
+          TableName: 'Todos',
+          AttributeDefinitions: [
+            {
+              AttributeName: 'id',
+              AttributeType: 'S',
+            },
+          ],
+          KeySchema: [
+            {
+              AttributeName: 'id',
+              KeyType: 'HASH',
+            },
+          ],
+          ProvisionedThroughput: {
+            ReadCapacityUnits: 1,
+            WriteCapacityUnits: 1,
+          },
+        },
+      },
     },
   },
 };

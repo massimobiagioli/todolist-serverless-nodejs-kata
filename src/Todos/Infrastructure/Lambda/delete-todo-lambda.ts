@@ -8,7 +8,9 @@ import {
 
 export const handler: APIGatewayProxyHandler = async (_event, _context) => {
   const command = container.get<DeleteTodoCommand>(Types.DeleteTodoCommand);
-  await command.execute(DeleteTodoCommandPayload.fromBody(_event.pathParameters.id));
+  await command.execute(
+    DeleteTodoCommandPayload.fromBody(_event.pathParameters.id),
+  );
 
   return {
     statusCode: 200,

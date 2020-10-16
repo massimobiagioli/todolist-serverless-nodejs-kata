@@ -1,9 +1,14 @@
 import { TodoRepository } from '../../../Domain/todo-repository';
 import { Todo } from '../../../Domain/todo';
 import { injectable } from 'inversify';
+import AWS from 'aws-sdk';
+import { DocumentClient } from 'aws-sdk/clients/dynamodb';
+import { v4 as uuidv4 } from 'uuid';
 
 @injectable()
 export class TodoRepositoryDynamodbImpl implements TodoRepository {
+  private dynamoClient: DocumentClient = new AWS.DynamoDB.DocumentClient();
+
   find(): Todo[] {
     const todos: Todo[] = new Array<Todo>();
 
@@ -14,10 +19,22 @@ export class TodoRepositoryDynamodbImpl implements TodoRepository {
     return todos;
   }
 
-  insert(todo: Todo): string {
-    console.log(todo);
-    const id = '12345';
-    return id;
+  async insert(todo: Todo): Promise<string> {
+    const id = uuidv4();
+    const parameters = {
+      TableName: 'Todos',
+      Item: {
+        id,
+        description: todo.description,
+      },
+    };
+
+    try {
+      await this.dynamoClient.put(parameters).promise();
+      return id;
+    } catch (error) {
+      return error.message;
+    }
   }
 
   update(todo: Todo): void {

@@ -10,7 +10,8 @@
     "outDir": "lib",
     "types": ["reflect-metadata", "node"],
     "experimentalDecorators": true,
-    "emitDecoratorMetadata": true
+    "emitDecoratorMetadata": true,
+    "allowSyntheticDefaultImports": true
   },
   "include": ["./**/*.ts"],
   "exclude": [

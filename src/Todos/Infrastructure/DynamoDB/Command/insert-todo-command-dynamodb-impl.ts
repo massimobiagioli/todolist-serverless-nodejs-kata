@@ -12,9 +12,13 @@ import { Todo } from '../../../Domain/todo';
 export class InsertTodoCommandDynamodbImpl implements InsertTodoCommand {
   @inject(Types.TodoRepository) private todoRepository: TodoRepository;
 
-  execute(payload: InsertTodoCommandPayload): InsertTodoCommandOutput {
+  async execute(
+    payload: InsertTodoCommandPayload,
+  ): Promise<InsertTodoCommandOutput> {
     const todo: Todo = new Todo(undefined, payload.description);
-    const id: string = this.todoRepository.insert(todo);
+
+    const id: string = await this.todoRepository.insert(todo);
+
     return new InsertTodoCommandOutput(id);
   }
 }

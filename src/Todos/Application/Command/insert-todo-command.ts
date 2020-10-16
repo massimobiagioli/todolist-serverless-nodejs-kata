@@ -2,7 +2,8 @@ export class InsertTodoCommandPayload {
   constructor(public readonly description: string) {}
 
   static fromBody(body: any): InsertTodoCommandPayload {
-    return new InsertTodoCommandPayload(body.description);
+    const bodyParsed = JSON.parse(body);
+    return new InsertTodoCommandPayload(bodyParsed.description);
   }
 }
 
@@ -11,5 +12,5 @@ export class InsertTodoCommandOutput {
 }
 
 export interface InsertTodoCommand {
-  execute(payload: InsertTodoCommandPayload): InsertTodoCommandOutput;
+  execute(payload: InsertTodoCommandPayload): Promise<InsertTodoCommandOutput>;
 }

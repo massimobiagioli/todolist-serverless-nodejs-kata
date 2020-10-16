@@ -34,11 +34,11 @@ const serverlessConfiguration: Serverless = {
       {
         Effect: 'Allow',
         Action: [
-          'dynamodb: Query',
-          'dynamodb: GetItem',
-          'dynamodb: PutItem',
-          'dynamodb: UpdateItem',
-          'dynamodb: DeleteItem',
+          'dynamodb:Query',
+          'dynamodb:GetItem',
+          'dynamodb:PutItem',
+          'dynamodb:UpdateItem',
+          'dynamodb:DeleteItem',
         ],
         Resource: 'arn:aws:dynamodb:eu-central-1:755827290206:table/Todos',
       },

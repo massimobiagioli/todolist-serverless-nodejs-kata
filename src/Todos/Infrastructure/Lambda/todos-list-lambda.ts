@@ -5,7 +5,7 @@ import { container } from '../../../inversify.config';
 
 export const handler: APIGatewayProxyHandler = async (_event, _context) => {
   const query = container.get<TodosListQuery>(Types.TodosListQuery);
-  const data = query.execute();
+  const data = await query.execute();
 
   return {
     statusCode: 200,

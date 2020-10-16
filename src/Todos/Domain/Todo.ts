@@ -3,4 +3,8 @@ export class Todo {
     public readonly id: string | null,
     public readonly description: string,
   ) {}
+
+  static fromDBItem(item: any): Todo {
+    return new Todo(item.id, item.description);
+  }
 }

@@ -9,13 +9,15 @@ import { v4 as uuidv4 } from 'uuid';
 export class TodoRepositoryDynamodbImpl implements TodoRepository {
   private dynamoClient: DocumentClient = new AWS.DynamoDB.DocumentClient();
 
-  find(): Todo[] {
+  async find(): Promise<Todo[]> {
     const todos: Todo[] = new Array<Todo>();
 
-    todos.push(new Todo('1', 'prova 1'));
-    todos.push(new Todo('2', 'prova 2'));
-    todos.push(new Todo('3', 'prova 3'));
+    const parameters = {
+      TableName: 'Todos',
+    };
 
+    const data = await this.dynamoClient.scan(parameters).promise();
+    data.Items.forEach(item => todos.push(Todo.fromDBItem(item)));
     return todos;
   }
 

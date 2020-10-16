@@ -8,7 +8,7 @@ import { Types } from '../../../../types';
 export class TodosListQueryDynamodbImpl implements TodosListQuery {
   @inject(Types.TodoRepository) private todoRepository: TodoRepository;
 
-  execute(): Todo[] {
-    return this.todoRepository.find();
+  async execute(): Promise<Todo[]> {
+    return await this.todoRepository.find();
   }
 }

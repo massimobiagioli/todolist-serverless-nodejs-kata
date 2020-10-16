@@ -1,7 +1,7 @@
 import { Todo } from './todo';
 
 export interface TodoRepository {
-  find(): Todo[];
+  find(): Promise<Todo[]>;
 
   insert(todo: Todo): Promise<string>;
 

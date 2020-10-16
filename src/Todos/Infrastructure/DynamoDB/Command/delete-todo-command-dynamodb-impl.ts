@@ -10,7 +10,7 @@ import {
 export class DeleteTodoCommandDynamodbImpl implements DeleteTodoCommand {
   @inject(Types.TodoRepository) private todoRepository: TodoRepository;
 
-  execute(payload: DeleteTodoCommandPayload): void {
-    this.todoRepository.delete(payload.id);
+  async execute(payload: DeleteTodoCommandPayload): Promise<void> {
+    await this.todoRepository.delete(payload.id);
   }
 }

@@ -3,15 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="a58db519-ec01-4a91-9dab-9b188b435248" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverless.ts" beforeDir="false" afterPath="$PROJECT_DIR$/serverless.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Todos/Application/Command/insert-todo-command.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Todos/Application/Command/insert-todo-command.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Todos/Application/Command/delete-todo-command.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Todos/Application/Command/delete-todo-command.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Todos/Domain/todo-repository.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Todos/Domain/todo-repository.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Todos/Infrastructure/DynamoDB/Command/insert-todo-command-dynamodb-impl.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Todos/Infrastructure/DynamoDB/Command/insert-todo-command-dynamodb-impl.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Todos/Infrastructure/DynamoDB/Command/delete-todo-command-dynamodb-impl.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Todos/Infrastructure/DynamoDB/Command/delete-todo-command-dynamodb-impl.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Todos/Infrastructure/DynamoDB/Repository/todo-repository-dynamodb-impl.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Todos/Infrastructure/DynamoDB/Repository/todo-repository-dynamodb-impl.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Todos/Infrastructure/Lambda/insert-todo-lambda.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Todos/Infrastructure/Lambda/insert-todo-lambda.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Todos/Infrastructure/Lambda/delete-todo-lambda.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Todos/Infrastructure/Lambda/delete-todo-lambda.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +67,7 @@
       <workItem from="1602225756031" duration="3014000" />
       <workItem from="1602257680388" duration="5328000" />
       <workItem from="1602830534503" duration="4445000" />
-      <workItem from="1602854331636" duration="2518000" />
+      <workItem from="1602854331636" duration="3325000" />
     </task>
     <servers />
   </component>

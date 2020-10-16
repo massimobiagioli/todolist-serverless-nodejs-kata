@@ -7,5 +7,5 @@ export class DeleteTodoCommandPayload {
 }
 
 export interface DeleteTodoCommand {
-  execute(payload: DeleteTodoCommandPayload): void;
+  execute(payload: DeleteTodoCommandPayload): Promise<void>;
 }

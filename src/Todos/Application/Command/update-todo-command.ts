@@ -4,11 +4,12 @@ export class UpdateTodoCommandPayload {
     public readonly description: string,
   ) {}
 
-  static fromBody(id: string, body: any): UpdateTodoCommandPayload {
-    return new UpdateTodoCommandPayload(id, body.description);
+  static fromRequest(id: string, body: any): UpdateTodoCommandPayload {
+    const bodyParsed = JSON.parse(body);
+    return new UpdateTodoCommandPayload(id, bodyParsed.description);
   }
 }
 
 export interface UpdateTodoCommand {
-  execute(payload: UpdateTodoCommandPayload): void;
+  execute(payload: UpdateTodoCommandPayload): Promise<void>;
 }

@@ -37,8 +37,20 @@ export class TodoRepositoryDynamodbImpl implements TodoRepository {
     }
   }
 
-  update(todo: Todo): void {
-    console.log(todo);
+  async update(todo: Todo): Promise<void> {
+    const parameters = {
+      TableName: 'Todos',
+      Key: {
+        id: todo.id,
+      },
+      AttributeUpdates: {
+        description: {
+          Value: todo.description,
+        },
+      },
+    };
+
+    await this.dynamoClient.update(parameters).promise();
   }
 
   async delete(id: string): Promise<void> {

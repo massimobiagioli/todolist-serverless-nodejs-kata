@@ -11,8 +11,8 @@ import {
 export class UpdateTodoCommandDynamodbImpl implements UpdateTodoCommand {
   @inject(Types.TodoRepository) private todoRepository: TodoRepository;
 
-  execute(payload: UpdateTodoCommandPayload): void {
+  async execute(payload: UpdateTodoCommandPayload): Promise<void> {
     const todo: Todo = new Todo(payload.id, payload.description);
-    this.todoRepository.update(todo);
+    await this.todoRepository.update(todo);
   }
 }

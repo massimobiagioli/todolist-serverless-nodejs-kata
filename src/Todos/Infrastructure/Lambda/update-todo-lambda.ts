@@ -8,8 +8,8 @@ import {
 
 export const handler: APIGatewayProxyHandler = async (_event, _context) => {
   const command = container.get<UpdateTodoCommand>(Types.UpdateTodoCommand);
-  command.execute(
-    UpdateTodoCommandPayload.fromBody(_event.pathParameters.id, _event.body),
+  await command.execute(
+    UpdateTodoCommandPayload.fromRequest(_event.pathParameters.id, _event.body),
   );
 
   return {

@@ -9,7 +9,7 @@ import {
 export const handler: APIGatewayProxyHandler = async (_event, _context) => {
   const command = container.get<InsertTodoCommand>(Types.InsertTodoCommand);
   const output = await command.execute(
-    InsertTodoCommandPayload.fromBody(_event.body),
+    InsertTodoCommandPayload.fromRequest(_event.body),
   );
 
   return {

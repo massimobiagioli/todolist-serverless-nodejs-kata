@@ -10,6 +10,7 @@ export class TodoRepositoryDynamodbImpl implements TodoRepository {
   private dynamoClient: DocumentClient = new AWS.DynamoDB.DocumentClient();
 
   async find(): Promise<Todo[]> {
+    console.info("***** FIND METHOD ****");
     const todos: Todo[] = new Array<Todo>();
 
     const parameters = {

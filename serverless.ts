@@ -54,6 +54,7 @@ const serverlessConfiguration: Serverless = {
           http: {
             method: 'get',
             path: 'api/todos',
+            cors: true
           },
         },
       ],
@@ -66,6 +67,7 @@ const serverlessConfiguration: Serverless = {
           http: {
             method: 'post',
             path: 'api/todos',
+            cors: true
           },
         },
       ],
@@ -78,6 +80,7 @@ const serverlessConfiguration: Serverless = {
           http: {
             method: 'put',
             path: 'api/todos/{id}',
+            cors: true,
             request: {
               parameters: {
                 paths: {
@@ -97,6 +100,7 @@ const serverlessConfiguration: Serverless = {
           http: {
             method: 'delete',
             path: 'api/todos/{id}',
+            cors: true,
             request: {
               parameters: {
                 paths: {
